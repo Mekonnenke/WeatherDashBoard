@@ -1,45 +1,27 @@
 
 //f1f28d70306b7031d8bcf24dd3ea5674
 
-
-$(document).ready(function() {
-  
-    // to test flag
-    const test = false;
-  
-    // get times from moment
-    const now = moment().format('MMMM Do YYYY');
-  
-    // commented out for test in non-standard hours
-    var nowHour24 = moment().format('H');
-    var nowHour12 = moment().format('h');
-      // set times for tesitng after hours
-      if (test) {
-        nowHour24 = 13;
-        nowHour12 = 1;
-      }
-    
-    var $dateDisplay = $('#currentDay');
-      $dateDisplay.text(now);
-      console.log("current day",nowHour12);
-  })
-
-  
-  https://samples.openweathermap.org/data/2.5/weather?q=Toronto&appid=f1f28d70306b7031d8bcf24dd3ea5674
-
    
-  https://api.openweathermap.org/data/2.5/weather?q=Toronto&appid=f1f28d70306b7031d8bcf24dd3ea5674&units=metric
+ // https://api.openweathermap.org/data/2.5/weather?q=Toronto&appid=f1f28d70306b7031d8bcf24dd3ea5674&units=metric
   
-
-
-  const express = request('express');
-
-  const app = express();
-
-
-  app.listning(3000, function(){
-
-    console.log("server is running on post 3000")
-
-  })
-  
+ let allEntries = JSON.parse(localStorage.getItem('all Entries'));
+ if (allEntries === null) {
+     allEntries = [];
+ }
+ // last local storage entry to display page on last searched city upon refresh
+ let lastEntry = allEntries[(allEntries.length) - 1];
+ 
+ // for loop through array of all to check IF
+ 
+ function getThatWeather(userInput) {
+     let apiKey = 'f1f28d70306b7031d8bcf24dd3ea5674';
+     let cityNameURL = 'https://api.openweathermap.org/data/2.5/forecast?q=' + userInput + '&units=imperial&appid=' + apiKey
+     //Current Weather API
+     $.ajax({
+         url: cityNameURL,
+         method: 'GET'
+     })
+         .then(function (response) {
+             console.log(response);
+ 
+ 
