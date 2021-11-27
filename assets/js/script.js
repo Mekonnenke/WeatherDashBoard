@@ -24,4 +24,14 @@
          .then(function (response) {
              console.log(response);
  
+             let currentResponse = {
+                 cityName: response.city.name,
+                 date: (response.list[0].dt_txt).split(" "),
+                 weatherIcon: "https://openweathermap.org/img/wn/" + response.list[0].weather[0].icon + "@2x.png",
+                 temperature: Math.round(response.list[0].main.temp),
+                 humidity: response.list[0].main.humidity,
+                 windSpeed: response.list[0].wind.speed,
+                 currentLat: response.city.coord.lat,
+                 currentLon: response.city.coord.lon
+             }
  
