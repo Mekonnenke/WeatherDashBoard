@@ -5,15 +5,15 @@
    }
 
    body{
-       background: #35a2e0;
+       background: #cddc39;
     @import 'https://fonts.googleapis.com/css?family=Raleway'
 
    }
 
    .headerBox  {
-    background: radial-gradient(rgb(103, 187, 243), rgb(0, 0, 0)); 
+    background: radial-gradient(rgb(139, 2, 87), rgb(0, 0, 0)); 
     height:30vh;
-    color:#ecf1be;
+    color:#cddc39;
     text-align: center;
     padding-top: 20px;
     display:flex;
@@ -59,7 +59,7 @@ div.borderYtoX a:before, div.borderYtoX a:after
     height: 100%;
     width: 2px;
     content: '';
-    background: #cddc39;
+    background: #FFF;
     transition: all 0.3s;
     display: inline;
    
@@ -92,7 +92,7 @@ div.borderXwidth a:before, div.borderXwidth a:after
     width: 0%;
     height: 2px;
     content: '';
-    background: #cddc39;
+    background: #FFF;
     transition: all 0.3s;
 }
 
@@ -110,10 +110,90 @@ div.borderXwidth a:hover:before, div.borderXwidth a:hover:after
 }
 
 .card-color{
-    background-color: #ecf1be;
-    border-color:  #7a1045;
+    background-color: #eadfff;
+    border-color: #484d57;
 }
 .storage-color{
-    background-color: #df49b2;
-    border-color: #ecf1be;
+    background-color: #a8b7cd;
+    border-color: #3c5685;
 }
+.storage-color:hover{
+    background-color: #eadfff;
+}
+.storage-color:focus{
+    background-color: #eadfff;
+    border-color: #680515;
+    border:solid 1px;
+    
+}
+.btn-color{
+    background-color: rgb(139, 2, 87);
+    color: #b1bed4;
+    border-color:rgb(139, 2, 87);
+}
+.btn-color:hover{
+    background-color: rgb(139, 2, 87);
+    color:  #94abcd;
+    border-color:rgb(139, 2, 87);
+}
+.search-color{
+    background-color: #a8b7cd;
+    border-color: rgb(139, 2, 87);
+}
+.search-color:hover{
+    background-color: #94abcd;
+    border-color: #314a78;
+}
+.search-color:focus {
+    background-color: #94abcd;
+    border-color:rgb(139, 2, 87);
+}
+#todayWeather {
+    display: none;
+}
+
+/* classes to set color for UV Index */
+.badge-green {
+    background-color: yellowgreen;
+    border:solid 1px;
+    border-color: rgb(139, 2, 87);
+}
+.badge-yellow {
+    background-color: yellow;
+    border:solid 1px;
+    border-color:  rgb(139, 2, 87);
+}
+.badge-orange {
+    background-color: orange;
+    border:solid 1px;
+    border-color:  rgb(139, 2, 87);
+}
+.badge-red {
+    background-color: orangered;
+    border:solid 1px;
+    border-color:  rgb(139, 2, 87);
+}
+
+/* Moving text inside Current Day Weather */
+#city-name{
+    padding-left: 3%;
+    font-size: 160%;
+}
+#date{
+    padding-left: 2%;
+    font-size: 160%;
+}
+#weather-icon{
+    position: relative;
+    left: 10%;
+    top: -40%;
+}
+#special-row{
+    margin-bottom: -12%;
+}
+#temperature{
+    margin-top: 0%;
+}
+
+
+
